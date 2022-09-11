@@ -1,0 +1,25 @@
+{
+    "dataset_type": "DIVFlicker2K",
+    "dataset_path": "./datasets/DIVFlicker2K_128",
+    "val_dataset_path": "./datasets/LIVE1_color",
+    "enable_line_nortify": true,
+
+    "name": "unet3",
+    "n_gpu": 1,
+    "steps": 500000,
+    "batch_size": 8,
+    "milestones": [250000, 400000],
+    "learning_rate_G": 1e-4,
+    "betas": [0.9, 0.999], 
+
+    "print_freq": 100,
+    "eval_freq": 10000,
+    "pretrained_path": null,
+
+    "input_image_resolution": [128, 128],
+
+    "color_channels": 3,
+    "depth": 5,
+    "dims": [32, 32, 64, 64, 128],
+    "ksizes": [7, 5, 5, 3, 3]   
+}

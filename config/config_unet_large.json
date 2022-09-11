@@ -1,0 +1,27 @@
+{
+    "dataset_type": "DIVFlicker2K",
+    "dataset_path": "./datasets/DIVFlicker2K_128_gray",
+    "val_dataset_path": "./datasets/Classic5",
+    "enable_line_nortify": true,
+
+    "name": "resunet_large2",
+    "n_gpu": 1,
+    "steps": 500000,
+    "batch_size": 32,
+    "milestones": [250000, 400000],
+    "learning_rate_G": 1e-4,
+    "betas": [0.9, 0.999], 
+
+    "print_freq": 100,
+    "eval_freq": 2000,
+    "save_freq": 50000,
+    "pretrained_path": null,
+
+    "input_image_resolution": [128, 128],
+
+    "color_channels": 1,
+    "level": 5,
+    "depth": 8,
+    "dims": [64, 128, 256, 512, 1024],
+    "ksizes": [3, 3, 3, 3, 3]
+}
